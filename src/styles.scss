@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/vendor/css/bootstrap.min.css';
+
+/*color*/
+$bg-color : #1e2330;
+$green : #b1e319;
+$white : #fff;
+$orange:#ffa403;
+/*colors*/
+
+/*common styles*/
+body{
+    font-size:16px;
+    color:$bg-color;
+}
+.wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 15px;
+  @media screen and (min-width:1230px){
+    padding:0;
+  }
+}
+.heading{    
+    text-align: center;
+    padding-bottom:25px;
+    h2{        
+        font-size: 2.8rem;
+        color:$white;
+        line-height: 60px;
+        text-transform: uppercase;
+        line-height: normal;
+    }
+    p{
+        color:$white;
+        padding-left:6px;
+        font-size: 1rem;
+    }
+    @media screen and (min-width:768px){
+        border-left:8px solid $green;
+        padding-left:35px;
+        text-align: left;
+        h2{        
+            font-size: 4rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+.btn.btn-primary{
+    background:$green;
+    border:$green;
+    border-radius: 0;
+}
+/*common styles*/
+
+/*login*/
+.login-wrapper{
+    background: $bg-color;
+    background-attachment: fixed;
+    background-size: 100%;
+    .login{
+        height:calc(100vh);
+        align-items: center;
+    }
+}
