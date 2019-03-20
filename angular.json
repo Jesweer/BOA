@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendor/js/jquery.min.js",
+              "src/assets/vendor/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

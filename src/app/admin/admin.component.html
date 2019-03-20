@@ -1,0 +1,47 @@
+<div class="admin">
+  <div class="wrapper">
+    <h3 class="text-center">BEVERAGE QUEUE</h3>
+    <div class="order-queue">
+      <div class="row">
+        <div class="col-sm-4">
+          <h4>In The Queue</h4>
+          <ul class="list-unstyled received">
+            <li *ngFor="let item of inqueue(commonQueue)">
+              <div class="box">
+                <h6>{{item.OrderedBeverage.Name}}</h6>
+                <p>{{item.BeverageBarUserFirstName}}</p>
+              </div>
+              <button class="btn btn-primary" (click)="drinkInProgress(item)">Click to Start Preparing</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h4>Being Mixed</h4>
+          <ul class="list-unstyled received prepared">
+            <li *ngFor="let item of inpreparation(commonQueue)">
+              <div class="box">
+                <h6>{{item.OrderedBeverage.Name}}</h6>
+                <p>{{item.BeverageBarUserFirstName}}</p>
+              </div>
+                <button class="btn btn-primary" (click)="drinkReady(item)">Click when Preparation Completed</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h4>Ready To Collect</h4>
+          <ul class="list-unstyled received prepared ready">
+            <li *ngFor="let item of ready(commonQueue)">
+              <div class="box">
+                <h6>{{item.OrderedBeverage.Name}}</h6>
+                <p>{{item.BeverageBarUserFirstName}}</p>                
+              </div>
+              <button class="btn btn-primary" (click)="drinkPicked(item)">Click when Order Picked</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <a href="javascript:void(0)" routerLink="/">Back</a>
+  </div>
+</div>

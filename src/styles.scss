@@ -5,12 +5,14 @@ $bg-color : #1e2330;
 $green : #b1e319;
 $white : #fff;
 $orange:#ffa403;
+$red : rgb(234, 67, 53);
 /*colors*/
 
 /*common styles*/
 body{
     font-size:16px;
-    color:$bg-color;
+    color:$white;
+    background: $bg-color;
 }
 .wrapper{
   max-width:1200px;
@@ -51,16 +53,97 @@ body{
     background:$green;
     border:$green;
     border-radius: 0;
+    color:$bg-color
 }
 /*common styles*/
 
 /*login*/
-.login-wrapper{
-    background: $bg-color;
-    background-attachment: fixed;
-    background-size: 100%;
-    .login{
-        height:calc(100vh);
-        align-items: center;
+.main{
+    padding:40px 0;
+    h3{
+        margin-bottom:15px;
+    }
+    .menu{
+        border:1px solid $white;
+        padding:15px 15px 0;
+        text-align: center;   
+        min-height: 500px;    
+        ul{
+            li{
+                a{
+                    color:$bg-color;
+                    background: $green;
+                    padding:15px 0;
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 7px;
+                    font-weight: 600;
+                    &:hover{
+                        text-decoration: none;
+                        color:$white;
+                        background-color: $orange;
+                        -webkit-transition: background-color 200ms linear;
+                        -ms-transition: background-color 200ms linear;
+                        transition: background-color 200ms linear;
+                    }
+                }
+            }
+        }
+    }
+    .order-queue{
+        border:1px solid $white;
+        padding:15px 15px 0;
+        text-align: center;
+        min-height: 500px; 
+        h4{
+            margin-bottom:15px;
+        } 
+        .received{
+            li{
+                margin-bottom: 15px;
+                .btn{
+                    width:100%;
+                    color:$bg-color
+                }
+            }
+            .box{
+                background: $white;
+                border:1px solid $white;                
+                h6{
+                    background:$red;
+                    padding:10px 0;
+                    font-size: 1.1em;
+                    margin-bottom:0.2em;
+                }
+                p{
+                    margin-bottom:0.2em;
+                    color:$bg-color;
+                }
+            }
+            &.prepared{
+                .box{
+                    h6{
+                        background:$orange
+                    }
+                }
+            }
+            &.prepared.ready{
+                .box{
+                    h6{
+                        background:$green;
+                    }
+                }
+            }
+        }
+    }
+}
+.userform{
+    .modal-title{
+        color:$bg-color
+    }
+    .form-group{
+        label{
+            color:$bg-color;
+        }
     }
 }
